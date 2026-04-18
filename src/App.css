@@ -68,6 +68,20 @@
   color: #4f3d2f;
 }
 
+.gallery-message {
+  width: fit-content;
+  margin: 16px auto 0;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b5a2b;
+  background: #f7ead8;
+  border: 1px solid #ebd7bd;
+  border-radius: 999px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(95, 70, 32, 0.08);
+}
+
 .gallery-buttons {
   display: flex;
   justify-content: center;

@@ -34,6 +34,11 @@ function Gallery() {
   const currentImage = recipeImages[currentIndex]
   const isFirstImage = currentIndex === 0
   const isLastImage = currentIndex === recipeImages.length - 1
+  const statusMessage = isFirstImage
+    ? 'First image reached. Previous is disabled.'
+    : isLastImage
+      ? 'Last image reached. Next is disabled.'
+      : ''
 
   const showPreviousImage = () => {
     if (!isFirstImage) {
@@ -75,6 +80,12 @@ function Gallery() {
           Next
         </button>
       </div>
+
+      {statusMessage && (
+        <p className="gallery-message" aria-live="polite">
+          {statusMessage}
+        </p>
+      )}
     </section>
   )
 }
